@@ -1,282 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Metadata of the Webpage -->
-    <!-- Character-set Metadata -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Viewport Metadata -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Description Metadata-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Portfolio Website" />
-    <!-- Author Metadata -->
-    <meta name="author" content="Aditya Vikram Singh" />
-    <!-- Keyword Metadata -->
-    <meta
-      name="keywords"
-      content="Aditya Singh, Aditya Vikram Singh, Aditya Vikram Singh DPS,
-        Aditya Vikram Singh DPSRKP, Aditya Vikram Singh UMass, Aditya Vikram
-        Singh UMass Amherst, Aditya Vikram Singh New Delhi, Aditya Vikram
-        Singh Amherst, Aditya Vikram Singh ISSDC, Aditya Vikram Singh NASA,
-        Aditya Vikram Singh, Aditya Vikram Singh Website, Aditya V Singh"
-    />
-    <!-- Webpage Logo -->
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <!-- Webpage Title -->
-    <title>Aditya Vikram Singh</title>
+    <meta name="author" content="Dennis Eduardo Melara Zepeda" />
+    <meta name="keywords" content="Dennis Eduardo Melara Zepeda" />
 
-    <!-- Import CSS: Main Stylesheet -->
+    <!-- Page Title -->
+    <title>Dennis Eduardo Melara Zepeda</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="./assets/css/main.css" />
-  </head>
-
-  <body>
+</head>
+<body>
     <div id="particles-js">
-      <div class="header">
-        <h1>
-          <span class="site-title">ADITYA VIKRAM SINGH</span>
-          <span class="site-description">Programmer • Web Developer • Graphic Designer</span>
-        </h1>
-        <div class="header-icons">
-          <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/avs1508/">
-            <i class="icon fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a aria-label="My Github Profile" target="_blank" href="https://github.com/AVS1508">
-            <i class="icon fa fa-github-alt" aria-hidden="true"></i>
-          </a>
-          <a aria-label="My Résumé" target="_blank" href="https://www.adityavsingh.com/resume.html">
-            <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
-          </a>
-          <a aria-label="Send Email" href="mailto:avsingh@umass.edu" target="_blank"
-            ><i class="icon fa fa-envelope"></i
-          ></a>
+        <div class="header">
+            <h1>
+                <span class="site-title">Dennis Eduardo Zepeda</span>
+                <span class="site-description">Programmer • Web Developer • Backend Developer</span>
+            </h1>
+            <div class="header-icons">
+                <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/eduardo-melara-364348312/">
+                    <i class="icon fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a aria-label="My Github Profile" target="_blank" href="https://github.com/EduardoCode1">
+                    <i class="icon fa fa-github-alt" aria-hidden="true"></i>
+                </a>
+                <a aria-label="My Résumé" target="_blank" href="./assets/Dennis Eduardo Melara Zepeda.pdf">
+                    <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
+                </a>
+                <a aria-label="Send Email" href="mailto:melaraeduardo661@gmail.com" target="_blank">
+                    <i class="icon fa fa-envelope"></i>
+                </a>
+            </div>
+            <div class="header-links">
+                <a class="link" href="#about" data-scroll>About Me</a>
+                <a class="link" href="#projects" data-scroll>Projects</a>
+                <a class="link" href="#certificates" data-scroll>Certificates</a>
+                <a class="link" href="#contact" data-scroll>Contact</a>
+            </div>
         </div>
-        <div class="header-links">
-          <a class="link" href="#about" data-scroll>About Me</a>
-          <a class="link" href="#projects" data-scroll>Projects</a>
-        </div>
-      </div>
-      <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+        <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
     </div>
 
     <!-- About Section -->
     <section id="about">
-      <!-- User Introduction-->
-      <div class="user-details">
-        <h1>My Story</h1>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="./assets/img/webp/Professional-Picture-Me.webp"
-            alt="Professional Me"
-            width="20%"
-            style="border-radius: 50%"
-          />
-          <img
-            src="./assets/img/jpg/Professional-Picture-Me.jpg"
-            alt="Professional Me"
-            width="20%"
-            style="border-radius: 50%"
-          />
-        </picture>
-        <p>
-          I am a junior in the College of Information and Computer Sciences at the University of Massachusetts Amherst,
-          pursuing an undergraduate degree. I am majoring in Computer Science, with intent to double major in
-          Mathematics with Statistics and Data Science concentration. I'm involved as a Software Developer for BUILD
-          UMass, where I use my software engineering skills for pro-bono app/web development and tech consulting for the
-          Amherst community. I also serve as a Designer for the HackUMass Organizing Team, responsible for graphics
-          design and production for the annual hackathon. I am interested in exploring the fields of Software
-          Engineering, Data Science, and Machine Learning, and I am open to opportunities for the same.
-        </p>
-      </div>
-
-      <!-- User Specifics -->
-      <div class="user">
-        <!-- Technology Stack #1: Languages -->
-        <div class="tech">
-          <h2>Languages</h2>
-          <i class="devicon-python-plain colored"></i>
-          <i class="devicon-java-plain-wordmark colored"></i>
-          <i class="devicon-cplusplus-plain colored"></i>
-          <i class="devicon-javascript-plain colored"></i>
-          <p>My favorite languages for systems programming, software engineering, and data analysis.</p>
+        <div class="user-details">
+            <h1>Professional Information</h1>
+            <picture>
+                <source type="image/webp" srcset="./assets/img/webp/yo.jpg" alt="Professional Me" width="20%" style="border-radius: 50%" />
+                <img src="./assets/img/jpg/yo.jpg" alt="Professional Me" width="20%" style="border-radius: 50%" />
+            </picture>
+            <p>
+                I am a junior web developer and third-year Computer Systems Engineering student at the University of El Salvador, dedicated to 
+                mastering both front-end and back-end development to become a Full Stack developer. With experience in database 
+                management for Guatemalan companies and customer service in national firms, I bring a blend of technical expertise and 
+                interpersonal skills to the table. I am fluent in English, learning French, and looking forward to sharing my passion for 
+                technology by participating in conferences and educational initiatives.
+            </p>
         </div>
 
-        <!-- Technology Stack #2: Front-End -->
-        <div class="tech">
-          <h2>Front-End</h2>
-          <i class="devicon-react-original colored"></i>
-          <i class="devicon-bootstrap-plain-wordmark colored"></i>
-          <i class="devicon-html5-plain-wordmark colored"></i>
-          <i class="devicon-css3-plain-wordmark colored"></i>
-          <p>My preferred technologies for front-end web development and component design.</p>
+        <div class="user">
+            <div class="tech">
+                <h2>Languages</h2>
+                <i class="devicon-python-plain colored"></i>
+                <i class="devicon-java-plain-wordmark colored"></i>
+                <i class="devicon-csharp-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <p>My favorite languages for systems programming, software engineering, and data analysis.</p>
+            </div>
+
+            <div class="tech">
+                <h2>Front-End</h2>
+                <i class="devicon-html5-plain-wordmark colored"></i>
+                <i class="devicon-css3-plain-wordmark colored"></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                <p>My preferred technologies for front-end web development and component design.</p>
+            </div>
+
+            <div class="tech">
+                <h2>Back-End</h2>
+                <i class="devicon-nodejs-plain colored"></i>
+                <i class="devicon-express-original-wordmark colored"></i>
+                <i class="devicon-mongodb-plain-wordmark colored"></i>
+                <p>My preferred technologies for back-end web programming and database architecture.</p>
+            </div>
+
+            <div class="tech">
+                <h2>Tools</h2>
+                <i class="devicon-git-plain-wordmark colored"></i>
+                <i class="devicon-visualstudio-plain colored"></i>
+                <i class="devicon-github-plain-wordmark colored"></i>
+                <i class="devicon-docker-plain-wordmark colored"></i>
+                <p>My favorite tools for version control, code editing, and container orchestration.</p>
+            </div>
         </div>
 
-        <!-- Technology Stack #3: Back-End -->
-        <div class="tech">
-          <h2>Back-End</h2>
-          <i class="devicon-nodejs-plain colored"></i>
-          <i class="devicon-express-original-wordmark colored"></i>
-          <i class="devicon-mongodb-plain-wordmark colored"></i>
-          <i class="devicon-postgresql-plain-wordmark colored"></i>
-          <p>My preferred technologies for back-end web programming and database architecture.</p>
-        </div>
-
-        <!-- Technology Stack #4: Tools -->
-        <div class="tech">
-          <h2>Tools</h2>
-          <i class="devicon-git-plain-wordmark colored"></i>
-          <i class="devicon-visualstudio-plain colored"></i>
-          <i class="devicon-github-plain-wordmark colored"></i>
-          <i class="devicon-docker-plain-wordmark colored"></i>
-          <p>My favorite tools for version control, code editing, and container orchestration.</p>
-        </div>
-      </div>
+        <section id="additional-skills" class="additional-skills">
+            <div class="tech center-tech">
+                <h2>Systems & Security</h2>
+                <div class="center-icons">
+                    <i class="devicon-windows8-plain colored"></i>
+                    <i class="devicon-linux-plain colored"></i>
+                </div>
+            </div>
+        </section>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="user-details">
+<!-- Projects Section -->
+<section id="projects">
+    <div class="user-details">
         <h1>Featured Projects</h1>
-      </div>
+    </div>
 
-      <!-- User Project #1: Personal Résumé Website -->
-      <div class="user-projects">
+    <div class="user-projects">
         <div class="images-right">
-          <picture>
-            <source type="image/webp" srcset="./assets/img/webp/Personal-Resume-Website.webp" alt="Personal Website" />
-            <img alt="Personal Website" src="./assets/img/jpg/Personal-Resume-Website.jpg" />
-          </picture>
+            <video width="320" height="240" controls>
+                <source src="./assets/img/my portafolio web.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="contents" style="text-align: center">
-          <h3>Personal Website</h3>
-          <div>
-            <img
-              height="32"
-              width="32"
-              src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg"
-              style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)"
-            />
-            &nbsp;
-            <img
-              height="32"
-              width="32"
-              src="https://unpkg.com/simple-icons@3.4.0/icons/bootstrap.svg"
-              style="filter: invert(24%) sepia(14%) saturate(2270%) hue-rotate(222deg) brightness(102%) contrast(90%)"
-            />
-            &nbsp;
-            <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" />
-          </div>
-          <p style="text-align: justify">
-            I developed and designed a website using ReactJS and Bootstrap, hosted on Github Pages, to showcase my web
-            presence, story, work experience, education, projects, and achievements in an interactive and
-            visually-appealing format.
-          </p>
-          <a class="project-link" target="_blank" href="https://www.adityavsingh.com/">Check it out!</a>
-        </div>
-      </div>
+            <h3>My Professional Portfolio Website
 
-      <!-- User Project #2: Summer 2020 Project -->
-      <div class="user-projects">
+            </h3>
+            <div>
+                <img height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/32px-Node.js_logo.svg.png" alt="Node.js" />
+                &nbsp;
+                <img height="32" width="32" src="https://www.herokucdn.com/favicons/favicon.ico" alt="Heroku" />
+                &nbsp;
+                <img height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/32px-JavaScript-logo.png" alt="JavaScript" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/css3.svg" style="filter: invert(33%) sepia(29%) saturate(3844%) hue-rotate(184deg) brightness(90%) contrast(84%)" />
+                &nbsp;
+                <img height="32" width="32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/32px-HTML5_logo_and_wordmark.svg.png" alt="HTML" />
+            </div>
+            
+            <p style="text-align: justify">
+                With my accumulated experience, I have crafted my professional portfolio website featuring an innovative, modern, and user-friendly design. It includes a captivating menu section, an "About Me" page, links to important files and videos, a showcase of technologies utilized in my projects, certifications earned through my studies in computer science, and a contact section where visitors can reach me via email.
+            </p>
+            <a class="project-link" target="_blank" href="https://www.adityavsingh.com/">Check it out!</a>
+        </div>
+    </div>
+
+    <div class="user-projects">
         <div class="images-left">
-          <picture>
-            <source type="image/webp" srcset="./assets/img/webp/Perpetual-Crusades.webp" alt="Perpetual Crusades" />
-            <img alt="Perpetual Crusades" src="./assets/img/jpg/Perpetual-Crusades.jpg" />
-          </picture>
+            <video width="320" height="240" controls>
+                <source src="./assets/img/avances.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="contents-right" style="text-align: center">
-          <h3>Perpetual Crusades</h3>
-          <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg"
-            style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)"
-          />
-          &nbsp;
-          <img
-            height="32"
-            width="32"
-            src="https://unpkg.com/simple-icons@3.4.0/icons/css3.svg"
-            style="filter: invert(33%) sepia(29%) saturate(3844%) hue-rotate(184deg) brightness(90%) contrast(84%)"
-          />
-          &nbsp;
-          <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" />
-          <p style="text-align: justify">
-            I created a two-player online dice-based board game with a theme loosely set around Dungeons & Dragons. It
-            was developed as a submission for Penn Apps XXI, using ReactJS and CSS Grid Layouts for design and hosted on
-            GitHub Pages.
-          </p>
-          <a class="project-link" target="_blank" href="https://github.com/AVS1508/Summer-2020-Project"
-            >Check it out!</a
-          >
+            <h3>TechLearn</h3>
+            <div>
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg" style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/css3.svg" style="filter: invert(33%) sepia(29%) saturate(3844%) hue-rotate(184deg) brightness(90%) contrast(84%)" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/javascript.svg" style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)" />
+               &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/mongodb.svg" style="filter: invert(52%) sepia(96%) saturate(310%) hue-rotate(69deg) brightness(93%) contrast(83%)" />
+            </div><p style="text-align: justify">
+                I founded and developed TECHLEARN, an educational app designed to empower economically disadvantaged individuals by 
+                providing access to quality courses and skills training. As the sole developer, I am responsible for all aspects of app 
+                development, from initial concept to deployment and user support. The app's primary goal is to enhance users' employability 
+                and improve their lifestyle by facilitating accessible education and job placement opportunities.
+            </p>
+            <a class="project-link" target="_blank" href="https://github.com/AVS1508/Summer-2020-Project">Check it out!</a>
         </div>
-      </div>
+    </div>
 
-      <!-- User Project #3: COVID-19 Tracker App -->
-      <div class="user-projects">
+    <div class="user-projects">
         <div class="images-right">
-          <picture>
-            <source type="image/webp" srcset="./assets/img/webp/COVID19-Tracker-App.webp" alt="COVID-19 Tracker App" />
-            <img alt="COVID-19 Tracker App" src="./assets/img/jpg/COVID19-Tracker-App.jpg" />
-          </picture>
+            <video width="320" height="240" controls>
+                <source src="./assets/img/proyecto de rutas.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="contents" style="text-align: center">
-          <h3>COVID-19 Tracker App</h3>
-          <div>
-            <img
-              height="32"
-              width="32"
-              src="https://unpkg.com/simple-icons@3.4.0/icons/javascript.svg"
-              style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)"
-            />
-          </div>
-          <p style="text-align: justify">
-            I created a web application for tracking the spread of COVID-19. Using Johns Hopkins University Center For
-            Systems Science and Engineering API, the website processes the COVID-19 data to create statistical
-            projections through graphs and charts.
-          </p>
-          <a class="project-link" target="_blank" href="https://www.adityavsingh.com/covid19-tracker-app">
-            Check it out!
-          </a>
+            <h3>Professional Bus Route Management Application</h3>
+            <div>
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg" style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/css3.svg" style="filter: invert(33%) sepia(29%) saturate(3844%) hue-rotate(184deg) brightness(90%) contrast(84%)" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/javascript.svg" style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)" />
+               &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/mongodb.svg" style="filter: invert(52%) sepia(96%) saturate(310%) hue-rotate(69deg) brightness(93%) contrast(83%)" />
+            </div><p style="text-align: justify">
+            <p style="text-align: justify">
+            <p style="text-align: justify">
+                During my journey in web and backend development, I created a professional bus route application using MongoDB, JavaScript, Node.js, and React. This application allows users to input and manage bus routes, including details such as speed, starting point, destination, and distance covered. Additionally, it features a database where all this information is stored, can be viewed, and searched efficiently.
+            </p>
+            <a class="project-link" target="_blank" href="https://github.com/EduardoCode1/Repositorio-camiones-rutas.git">Check it out!</a>
         </div>
-      </div>
+    </div>
 
-      <!-- Use Project #4: Valuto: Account Management System -->
-      <div class="user-projects">
+    <div class="user-projects">
         <div class="images-left">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="./assets/img/webp/Valuto-Account-Management.webp"
-              alt="Valuto: Account Management System"
-            />
-            <img alt="Valuto: Account Management System" src="./assets/img/jpg/Valuto-Account-Management.jpg" />
-          </picture>
+            <video width="320" height="240" controls>
+                <source src="./assets/img/musci api.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="contents-right" style="text-align: center">
-          <h3>Valuto: Account Management System</h3>
-          <div>
-            <img
-              height="32"
-              width="32"
-              src="https://unpkg.com/simple-icons@3.4.0/icons/cplusplus.svg"
-              style="filter: invert(22%) sepia(77%) saturate(1486%) hue-rotate(183deg) brightness(101%) contrast(103%)"
-            />
-          </div>
-          <p style="text-align: justify">
-            I developed a CLI system for accounting management and financial statement maintenance. The purpose of the
-            system is to maintain a record of the funds received, used, disseminated and donated by an organization.
-            Details of transactions and maintenance of a budget and tallying of current balance/inventory in cash/kind
-            is incorporated in this system.
-          </p>
-          <a class="project-link" target="_blank" href="https://github.com/AVS1508/Valuto-Account-Management-System">
-            Check it out!
-          </a>
+            <h3>Development of a Spotify-Inspired Music Platform</h3>
+            <div>
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/react.svg" style="filter: invert(73%) sepia(74%) saturate(1552%) hue-rotate(169deg) brightness(109%) contrast(97%)" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/css3.svg" style="filter: invert(33%) sepia(29%) saturate(3844%) hue-rotate(184deg) brightness(90%) contrast(84%)" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/github.svg" />
+                &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/javascript.svg" style="filter: invert(96%) sepia(47%) saturate(4151%) hue-rotate(338deg) brightness(100%) contrast(95%)" />
+               &nbsp;
+                <img height="32" width="32" src="https://unpkg.com/simple-icons@3.4.0/icons/mongodb.svg" style="filter: invert(52%) sepia(96%) saturate(310%) hue-rotate(69deg) brightness(93%) contrast(83%)" />
+            </div><p style="text-align: justify">
+            <p style="text-align: justify">
+                During my journey in backend development, I created a platform similar to Spotify. I mastered CRUD operations (Create, Read, Update, Delete), implementing two interfaces: one for administrators and another for end users. This allowed users to listen to music, manage playlists, modify metadata, and delete songs as needed.
+            </p>
+            <a class="project-link" target="_blank" href="https://github.com/EduardoCode1/RESTfulAPI.git">Check it out!</a>
         </div>
-      </div>
+    </div>
+</section>
+
+    
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <div class="user-details">
+            <h1>Certificates</h1>
+        </div>
+
+        <div class="row">
+            <!-- Certificate 1 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara ZepedaExcel-intermedio.jpg" alt="Certificate 1" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Excel 2016 Starter - Medium </span>
+                        <p>Instituto Salvadoreño De Formación Profesional</p>
+                        <p>2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/MELARA ZEPEDA DENNIS EDUARDO auditoria.jpg" alt="Certificate 2" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Analysis and Planning of the IT Audit</span>
+                        <p>Instituto Salvadoreño De Formación Profesional</p>
+                        <p>2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/complete JavaScript, XML, Ajax and React Bootcamp_page-0001.jpg" alt="Certificate 3" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">complete JavaScript, XML, Ajax and React Bootcamp</span>
+                        <p>Udemy</p>
+                        <p>2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda  Excel Profesional 2022- Para_page-0001.jpg" alt="Certificate 4" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Professional Excel 2022 - For Businesses!</span>
+                        <p>Udemy</p>
+                        <p>2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Certificate 5 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda Excel_page-0001.jpg" alt="Certificate 5" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Master in formulas and functions in Excel</span>
+                        <p>Udemy</p>
+                        <p>2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda HTML_page-0001.jpg" alt="Certificate 6" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">HTML, CSS and JavaScript fundamentals</span>
+                        <p>Centro de Formación Avanzada para Profesionales</p>
+                        <p>2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 7 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/English_for_IT.jpg" alt="Certificate 7" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">English for IT 1 & 2</span>
+                        <p>Networking Academy</p>
+                        <p>2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 8 -->
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./assets/img/Certificados jpg/MELARA ZEPEDA, DENNIS EDUARDO Server_page-0001.jpg" alt="Certificate 8" class="cert-img">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Implementing and Managing Enterprise Solutions: Windows Server 2019</span>
+                        <p>Centro de Formación Avanzada para Profesionales</p>
+                        <p>2022</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Certificate 9 -->
+         <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/img/Certificados jpg/the complete java game development course for 2023_page-0001.jpg" alt="Certificate 9" class="cert-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">the complete java game development course for 2023</span>
+                    <p>Udemy</p>
+                    <p>2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col s8 offset-s2">
+                    <div id="content" class="m2">
+                        <header id="header" class="pink darken-1">
+                            Contact Me
+                        </header>
+
+                        <form id="contactForm" action="" class="col s10 offset-s1">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="name">Name:</label>
+                                    <input id="name" type="text" required>
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="email">Email:</label>
+                                    <input id="email" type="email" required>
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="message">Message: </label>
+                                    <textarea id="message" class="materialize-textarea" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row" id="loaders">
+                                <img id="spinner" src="https://www.dropbox.com/s/wfsji06m6jfe0yl/spinner.gif?raw=1" width="150" style="display:none;">
+                                <img id="success-icon" src="https://th.bing.com/th/id/OIP.ZNcKF2uyUu0OQdtRsCKSaAHaHa?w=512&h=512&rs=1&pid=ImgDetMain" width="150" style="display:none;">
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <button id="send" class="btn waves-effect waves-light pink darken-2" type="submit" name="action">Send
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                                <div class="col s6">
+                                    <button id="resetBtn" class="btn waves-effect waves-light light-blue darken-2" type="reset">Reset
+                                        <i class="material-icons right">delete</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form> 
+                    </div> <!-- .contenido -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Certificate" style="width: 100%;">
+        </div>
+    </div>
 
     <footer class="footer">
-      <p>&copy; Aditya Vikram Singh, 2020</p>
+        <p>&copy; Dennis Eduardo Melara Zepeda, 2024</p>
     </footer>
 
     <!-- Import JS: Particles Theme -->
@@ -287,5 +448,52 @@
     <script src="./assets/js/google-analytics.js"></script>
     <!-- Import JS: Main Script -->
     <script src="./assets/js/main.js"></script>
-  </body>
+    <!-- Materialize JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Contact Form Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            fetch('http://localhost:5000/api/contact/send-contact-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Email sent successfully') {
+                    document.getElementById('confirmationModal').style.display = 'block';
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('confirmationModal').style.display = 'none';
+        });
+
+        // Certificate modal script
+        document.querySelectorAll('.cert-img').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.getElementById('certificate-modal');
+                const modalImg = document.getElementById('modal-img');
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+            });
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('certificate-modal').style.display = 'none';
+        });
+    </script>
+</body>
 </html>

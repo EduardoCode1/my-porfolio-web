@@ -4821,11 +4821,11 @@ a img {
 }
 
 #particles-js {
-    background: #1488CC;
+    background: #000;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+    background: -webkit-linear-gradient(to right, #000, #000);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC);
+    background: linear-gradient(to right, #000, #000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     display: flex;
@@ -4926,8 +4926,8 @@ a img {
 
 .header-icons .icon:active,
 .header-icons .icon:hover {
-    color: #1488CC;
-    background: #fff
+    color: #fff;
+    background: #000
 }
 
 @media only screen and (min-width:550px) {
@@ -5104,11 +5104,11 @@ a img {
 }
 
 .footer {
-    background: #1488CC;
+    background: #000;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+    background: -webkit-linear-gradient(to right, #000, #000);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC);
+    background: linear-gradient(to right, #000, #000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 10px 0;
     margin-top: 100px;
@@ -5125,3 +5125,132 @@ a img {
     margin: 0;
     color: #fff
 }
+.additional-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .additional-skills .tech {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .additional-skills .tech:last-child {
+    margin-right: 0;
+  }
+  .tech i {
+    font-size: 4rem; /* Ajusta el tamaño según tus necesidades */
+    margin: 0 10px; /* Añade margen horizontal para espaciar los iconos */
+  }
+  /* Agrega esta clase al CSS existente */
+.center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .tech i {
+    font-size: 4rem; /* Ajusta el tamaño según tus necesidades */
+    margin: 0 10px; /* Añade margen horizontal para espaciar los iconos */
+  }
+  
+  /* Agrega esto a tu CSS existente */
+
+/* Centrar la sección */
+.center-tech {
+    text-align: center;
+  }
+  
+  /* Centrar los iconos dentro de la sección */
+  .center-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
+  }
+  
+  .center-icons i {
+    font-size: 4rem; /* Ajusta el tamaño de los iconos si es necesario */
+  }
+  /* main.css */
+
+/* Estilos para el formulario de contacto */
+
+#content {
+    background-color: white;
+    margin-top: 40px;
+    -webkit-box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+}
+#content::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+header {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+}
+form {
+    margin: 30px 0;
+}
+#loaders {
+    text-align: center;
+}
+#loaders img {
+    width: 150px;
+    margin: 0 auto;
+    /* display: none; */
+}
+#resetBtn {
+    float: right;
+}
+
+#spinner {
+    display: none;
+}
+/* Add to your main.css file */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    overflow: auto;
+    border-radius: 8px;
+}
+
+.modal-content {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+

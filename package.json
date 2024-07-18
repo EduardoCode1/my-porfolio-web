@@ -1,0 +1,24 @@
+{
+  "name": "my-alternate-portfolio-website",
+  "version": "1.0.0",
+  "description": "My Alternate Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo \"Build step not defined\"",
+    "test": "echo \"No test specified\""
+  },
+  "author": "Dennis Zepeda",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "materialize-css": "^1.0.0",
+    "nodemailer": "^6.9.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

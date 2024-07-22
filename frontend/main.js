@@ -1,4 +1,3 @@
-// C:\Users\Dennis Zepeda\Proyecto-blog-interactivo\frontend\main.js
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('form').addEventListener('submit', async function(event) {
         event.preventDefault();

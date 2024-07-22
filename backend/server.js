@@ -15,18 +15,27 @@ app.use(cors({
   allowedHeaders: 'Content-Type,Authorization'
 }));
 
+// Middleware para parsear JSON y URL encoded
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Servir archivos estáticos desde la carpeta frontend
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Rutas de la API
+// Ruta para las API
 app.use('/api/contact', contactRoutes);
 
-// Ruta principal para el frontend
+// Ruta para archivos estáticos y frontend
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  // Verificar si el archivo solicitado existe
+  const filePath = path.join(__dirname, '../frontend', req.path === '/' ? 'index.html' : req.path);
+  
+  // Enviar el archivo si existe, de lo contrario, responder con error 404
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).send('404 Not Found');
+    }
+  });
 });
 
 app.listen(PORT, () => {

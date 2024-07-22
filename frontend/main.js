@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.getElementById('message').value;
 
         try {
-            const response = await fetch('http://192.168.1.21:5000/api/contact/send-contact-email', {
+            const response = await fetch('https://dennis-zepeda.onrender.com/api/contact/send-contact-email', { // Usa tu dominio aquí
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const result = await response.json();
-            alert('Email sent successfully!');
+            alert('¡Correo electrónico enviado exitosamente!');
         } catch (error) {
             console.error('Error:', error);
-            alert('An error occurred. Please try again later.');
+            alert('Ocurrió un error. Por favor, inténtelo de nuevo más tarde.');
         }
     });
 });

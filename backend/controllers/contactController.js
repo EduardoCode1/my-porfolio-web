@@ -1,18 +1,8 @@
 // backend/controllers/contactController.js
-const nodemailer = require('nodemailer');
+const transporter = require('../utils/mailer'); // Usa el transporte configurado aquí
 
-// Función para enviar el correo electrónico de contacto
 exports.sendContactEmail = async (req, res) => {
     const { name, email, message } = req.body;
-
-    // Configuración del transporte de Nodemailer
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        }
-    });
 
     // Correo electrónico que se enviará a ti
     const mailOptionsToYou = {
@@ -26,7 +16,7 @@ exports.sendContactEmail = async (req, res) => {
     const mailOptionsToClient = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: 'Message Received Confirmation',
+        subject: 'Confirmación de mensaje recibido',
         html: `
             <html>
             <head>
@@ -91,11 +81,11 @@ exports.sendContactEmail = async (req, res) => {
             </head>
             <body>
                 <div class="container">
-                    <h1>Hello ${name},</h1>
-                    <img src="https://www.dropbox.com/scl/fi/qb61y17fmdnu6t9wiwapl/gmail-presentacion.png?rlkey=1ww5xut9moo74uvri4wnnzr0l&raw=1" alt="Presentation">
-                    <p>Best regards,</p>
+                    <h1>Hola ${name},</h1>
+                    <img src="https://www.dropbox.com/scl/fi/qb61y17fmdnu6t9wiwapl/gmail-presentacion.png?rlkey=1ww5xut9moo74uvri4wnnzr0l&raw=1" alt="Presentación">
+                    <p>Saludos cordiales,</p>
                     <p>Dennis Eduardo Melara Zepeda</p>
-                    <p>Connect with me:</p>
+                    <p>Conéctate conmigo:</p>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/eduardo-melara-364348312/">LinkedIn</a></li>
                         <li><a href="https://github.com/EduardoCode1">GitHub</a></li>
@@ -103,7 +93,7 @@ exports.sendContactEmail = async (req, res) => {
                         <li><a href="https://api.whatsapp.com/qr/VCTRW5OR4QDNA1?autoload=1&app_absent=0">WhatsApp</a></li>
                     </ul>
                     <div class="footer">
-                        <p>If you have any questions or need further assistance, feel free to reach out.</p>
+                        <p>Si tienes alguna pregunta o necesitas más ayuda, no dudes en comunicarte.</p>
                     </div>
                 </div>
             </body>
@@ -117,9 +107,9 @@ exports.sendContactEmail = async (req, res) => {
             transporter.sendMail(mailOptionsToYou),
             transporter.sendMail(mailOptionsToClient)
         ]);
-        res.json({ message: 'Email sent successfully' });
+        res.json({ message: 'Correo electrónico enviado exitosamente' });
     } catch (error) {
         console.error('Error:', error);
-        res.status(500).json({ message: 'Failed to send email' });
+        res.status(500).json({ message: 'Error al enviar el correo electrónico' });
     }
 };

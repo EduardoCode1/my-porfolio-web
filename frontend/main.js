@@ -27,3 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+fetch('https://dennis-zepeda.onrender.com/test-email')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.message); // Verifica la respuesta en la consola del navegador
+    })
+    .catch(error => console.error('Error:', error));

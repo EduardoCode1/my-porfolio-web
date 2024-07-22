@@ -15,6 +15,17 @@ app.use(cors({
   methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization'
 }));
+app.use((req, res, next) => {
+  console.log(`Request received: ${req.method} ${req.url}`);
+  next();
+});
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(500).json({ message: 'Error en el servidor' });
+});
+app.get('/test-email', (req, res) => {
+  res.json({ message: 'Ruta de prueba de correo electrónico funcionando' });
+});
 
 
 app.use(bodyParser.json());

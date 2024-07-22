@@ -19,6 +19,11 @@ app.use(cors({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Ruta de prueba
+app.get('/test', (req, res) => {
+    res.json({ message: 'Servidor está funcionando correctamente' });
+});
+
 // Servir archivos estáticos desde el directorio public
 app.use(express.static(path.join(__dirname, '../public')));
 

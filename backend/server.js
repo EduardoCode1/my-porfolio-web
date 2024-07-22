@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 // Configuración CORS
 app.use(cors({
-    origin: '*', // Permitir todos los orígenes
+    origin: 'https://dennis-zepeda.onrender.com', // Tu dominio en Render
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization'
 }));

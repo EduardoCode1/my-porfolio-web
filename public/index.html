@@ -406,7 +406,7 @@
                                 <input id="email" type="email" required>
                             </div>
                             <div class="input-field col s12">
-                                <label for="message">Message: </label>
+                                <label for="message">Message:</label>
                                 <textarea id="message" class="materialize-textarea" required></textarea>
                             </div>
                         </div>
@@ -433,11 +433,11 @@
     </div>
 </section>
 
-<!-- Confirmation Modal -->
-<div id="confirmationModal" style="display:none;">
+<!-- Certificate Modal -->
+<div id="certificate-modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Email sent successfully!</p>
+        <img id="modal-img" src="" alt="Certificate" style="width: 100%;">
     </div>
 </div>
 
@@ -461,11 +461,15 @@
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        
+
+        // Show the spinner and hide the success icon
+        document.getElementById('spinner').style.display = 'block';
+        document.getElementById('success-icon').style.display = 'none';
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-        
+
         fetch('https://dennis-zepeda.onrender.com/api/contact/send-contact-email', {
             method: 'POST',
             headers: {
@@ -475,15 +479,21 @@
         })
         .then(response => response.json())
         .then(data => {
+            // Hide the spinner and show the success icon if email sent successfully
+            document.getElementById('spinner').style.display = 'none';
             if (data.message === 'Email sent successfully') {
                 document.getElementById('success-icon').style.display = 'block';
             }
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+            // Hide the spinner in case of error
+            document.getElementById('spinner').style.display = 'none';
+        });
     });
 
     document.querySelector('.close').addEventListener('click', function() {
-        document.getElementById('confirmationModal').style.display = 'none';
+        document.getElementById('certificate-modal').style.display = 'none';
     });
 
     // Certificate modal script

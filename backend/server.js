@@ -19,20 +19,24 @@ app.use(cors({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Servir archivos estáticos desde la carpeta frontend
-app.use(express.static(path.join(__dirname, '../frontend')));
+// Servir archivos estáticos desde la carpeta public
+app.use(express.static(path.join(__dirname, '../public')));
 
-// Ruta para las API
+// Ruta de la API
 app.use('/api/contact', contactRoutes);
 
-// Ruta para archivos estáticos y frontend
+// Ruta para favicon.ico
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/assets/img/favicon.ico'));
+});
+
+// Ruta principal para el frontend
 app.get('*', (req, res) => {
-  // Verificar si el archivo solicitado existe
-  const filePath = path.join(__dirname, '../frontend', req.path === '/' ? 'index.html' : req.path);
+  const filePath = path.join(__dirname, '../public', req.path === '/' ? 'index.html' : req.path);
   
-  // Enviar el archivo si existe, de lo contrario, responder con error 404
   res.sendFile(filePath, (err) => {
     if (err) {
+      console.log(`Error serving file: ${err}`);
       res.status(404).send('404 Not Found');
     }
   });

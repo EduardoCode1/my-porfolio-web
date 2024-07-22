@@ -2,7 +2,7 @@
   "name": "my-alternate-portfolio-website",
   "version": "1.0.0",
   "description": "My Alternate Portfolio Website",
-  "main": "backend/server.js", 
+  "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
     "build": "echo \"Build step not defined\"",

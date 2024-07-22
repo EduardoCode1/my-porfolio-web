@@ -9,7 +9,13 @@ const contactRoutes = require('./routes/contact.routes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Configuración CORS
+app.use(cors({
+    origin: 'https://dennis-zepeda.onrender.com/', // Reemplaza con el dominio de tu frontend
+    methods: 'GET,POST,PUT,DELETE', // Métodos permitidos
+    allowedHeaders: 'Content-Type,Authorization' // Cabeceras permitidas
+}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

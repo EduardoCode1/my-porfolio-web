@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -20,12 +21,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Servir archivos estáticos desde la carpeta frontend
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Rutas
+// Rutas de la API
 app.use('/api/contact', contactRoutes);
 
-// Ruta de prueba
-app.get('/test', (req, res) => {
-    res.json({ message: 'Servidor está funcionando correctamente' });
+// Ruta principal para el frontend
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 app.listen(PORT, () => {

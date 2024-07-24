@@ -5194,7 +5194,7 @@ header {
     text-align: center;
     color: white;
     font-size: 22px;
-    font-family: 'Raleway', sans-serif;
+    font-family: '', sans-serif;
 }
 form {
     margin: 30px 0;
@@ -5252,5 +5252,27 @@ form {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+/* certificates.css */
+.certificates-container.hidden {
+    display: none;
+}
+
+.show-certificates-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.arrow-down {
+    cursor: pointer;
+    font-size: 2em;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Especifica el color del ícono para que sea el color deseado o transparente */
+.arrow-down,.fa-arrow-up:before i {
+    color: #000; /* Cambia a cualquier color que prefieras, por ejemplo, negro (#000) */
 }
 

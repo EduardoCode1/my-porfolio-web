@@ -3,7 +3,7 @@
 <head>
 
     <!-- Favicon -->
-    <link rel="icon" href="./assets/css/main.css" type="image/x-icon">
+    <link rel="icon" href="../assets/css/main.css" type="image/x-icon">
 
     <!-- Metadata of the Webpage -->
     <meta charset="utf-8" />
@@ -20,15 +20,16 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30edfadfcd.js" crossorigin="anonymous"></script>
 
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="../public/assets/css/main.css" />
     <!-- favicon -->
 
-    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 
    
 </head>
@@ -46,7 +47,7 @@
                 <a aria-label="My Github Profile" target="_blank" href="https://github.com/EduardoCode1">
                     <i class="icon fa fa-github-alt" aria-hidden="true"></i>
                 </a>
-                <a aria-label="My Résumé" target="_blank" href="./assets/Dennis Eduardo Melara Zepeda.pdf">
+                <a aria-label="My Résumé" target="_blank" href="../assets/Dennis Eduardo Melara Zepeda.pdf">
                     <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
                 </a>
                 <a aria-label="Send Email" href="mailto:melaraeduardo661@gmail.com" target="_blank">
@@ -246,113 +247,121 @@
 </section>
 
     
-    <!-- Certificates Section -->
-    <section id="certificates">
-        <div class="user-details">
-            <h1>Certificates</h1>
-        </div>
+   <!-- Certificates Section -->
+<section id="certificates">
+    <div class="user-details">
+        <h1>Certificates</h1>
+    </div>
 
-        <div class="row">
-            <!-- Certificate 1 -->
-            <div class="col s12 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara ZepedaExcel-intermedio.jpg" alt="Certificate 1" class="cert-img">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Excel 2016 Starter - Medium </span>
-                        <p>Instituto Salvadoreño De Formación Profesional</p>
-                        <p>2021</p>
-                    </div>
+    <!-- Message and arrow-down button -->
+    <div class="show-certificates-message">
+        <p>Click on the arrow below to view all certificates</p>
+        <button id="toggle-certificates-btn" class="arrow-down">
+            <i class="fa-solid fa-arrow-down"></i>
+        </button>
+    </div>
+
+    <div class="row certificates-container hidden">
+        <!-- Certificate 1 -->
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara ZepedaExcel-intermedio.jpg" alt="Certificate 1" class="cert-img">
                 </div>
-            </div>
-
-            <!-- Certificate 2 -->
-            <div class="col s12 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/img/Certificados jpg/MELARA ZEPEDA DENNIS EDUARDO auditoria.jpg" alt="Certificate 2" class="cert-img">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Analysis and Planning of the IT Audit</span>
-                        <p>Instituto Salvadoreño De Formación Profesional</p>
-                        <p>2023</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificate 3 -->
-            <div class="col s12 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/img/Certificados jpg/complete JavaScript, XML, Ajax and React Bootcamp_page-0001.jpg" alt="Certificate 3" class="cert-img">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">complete JavaScript, XML, Ajax and React Bootcamp</span>
-                        <p>Udemy</p>
-                        <p>2023</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificate 4 -->
-            <div class="col s12 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda  Excel Profesional 2022- Para_page-0001.jpg" alt="Certificate 4" class="cert-img">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Professional Excel 2022 - For Businesses!</span>
-                        <p>Udemy</p>
-                        <p>2022</p>
-                    </div>
+                <div class="card-content">
+                    <span class="card-title">Excel 2016 Starter - Medium </span>
+                    <p>Instituto Salvadoreño De Formación Profesional</p>
+                    <p>2021</p>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <!-- Certificate 5 -->
-            <div class="col s12 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda Excel_page-0001.jpg" alt="Certificate 5" class="cert-img">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">Master in formulas and functions in Excel</span>
-                        <p>Udemy</p>
-                        <p>2022</p>
-                    </div>
+        <!-- Certificate 2 -->
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/img/Certificados jpg/MELARA ZEPEDA DENNIS EDUARDO auditoria.jpg" alt="Certificate 2" class="cert-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">Analysis and Planning of the IT Audit</span>
+                    <p>Instituto Salvadoreño De Formación Profesional</p>
+                    <p>2023</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Certificate 6 -->
-            <div class="col s12 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda HTML_page-0001.jpg" alt="Certificate 6" class="cert-img">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">HTML, CSS and JavaScript fundamentals</span>
-                        <p>Centro de Formación Avanzada para Profesionales</p>
-                        <p>2022</p>
-                    </div>
+        <!-- Certificate 3 -->
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/img/Certificados jpg/complete JavaScript, XML, Ajax and React Bootcamp_page-0001.jpg" alt="Certificate 3" class="cert-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">complete JavaScript, XML, Ajax and React Bootcamp</span>
+                    <p>Udemy</p>
+                    <p>2023</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Certificate 7 -->
-            <div class="col s12 m6 l3">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/img/Certificados jpg/English_for_IT.jpg" alt="Certificate 7" class="cert-img">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">English for IT 1 & 2</span>
-                        <p>Networking Academy</p>
-                        <p>2024</p>
-                    </div>
+        <!-- Certificate 4 -->
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda  Excel Profesional 2022- Para_page-0001.jpg" alt="Certificate 4" class="cert-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">Professional Excel 2022 - For Businesses!</span>
+                    <p>Udemy</p>
+                    <p>2022</p>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <div class="row certificates-container hidden">
+        <!-- Certificate 5 -->
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda Excel_page-0001.jpg" alt="Certificate 5" class="cert-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">Master in formulas and functions in Excel</span>
+                    <p>Udemy</p>
+                    <p>2022</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificate 6 -->
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/img/Certificados jpg/Dennis Eduardo Melara Zepeda HTML_page-0001.jpg" alt="Certificate 6" class="cert-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">HTML, CSS and JavaScript fundamentals</span>
+                    <p>Centro de Formación Avanzada para Profesionales</p>
+                    <p>2022</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificate 7 -->
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/img/Certificados jpg/English_for_IT.jpg" alt="Certificate 7" class="cert-img">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">English for IT 1 & 2</span>
+                    <p>Networking Academy</p>
+                    <p>2024</p>
+                </div>
+            </div>
+        </div>
+ 
             <!-- Certificate 8 -->
             <div class="col s12 m6 l3">
                 <div class="card">
@@ -452,7 +461,7 @@
 <!-- Import JS: Google Analytics -->
 <script src="./assets/js/google-analytics.js"></script>
 <!-- Import JS: Main Script -->
-<script src="./assets/js/main.js"></script>
+<script src="../public/assets/js/main.js"></script>
 <!-- Materialize JS -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -510,8 +519,6 @@
         document.getElementById('certificate-modal').style.display = 'none';
     });
 </script>
-
-    <script src="/main.js"></script>
 
 </body>
 </html>

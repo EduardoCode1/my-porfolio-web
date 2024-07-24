@@ -112,14 +112,15 @@ exports.sendContactEmail = async (req, res) => {
     };
 
     try {
-        // Enviar ambos correos electrónicos simultáneamente
-        await Promise.all([
-            transporter.sendMail(mailOptionsToYou),
-            transporter.sendMail(mailOptionsToClient)
-        ]);
-        res.json({ message: 'Email sent successfully' });
-    } catch (error) {
-        console.error('Error:', error);
-        res.status(500).json({ message: 'Failed to send email' });
-    }
+       // Enviar ambos correos electrónicos simultáneamente
+       await Promise.all([
+        transporter.sendMail(mailOptionsToYou),
+        transporter.sendMail(mailOptionsToClient)
+    ]);
+    // Cambiar la respuesta para no enviar el mensaje de éxito
+    res.status(200).json({});
+} catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ message: 'Failed to send email' });
+}
 };

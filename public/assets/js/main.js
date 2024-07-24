@@ -27,3 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// archivo: script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggle-certificates-btn');
+    const certificatesContainers = document.querySelectorAll('.certificates-container');
+
+    toggleButton.addEventListener('click', function() {
+        certificatesContainers.forEach(container => {
+            if (container.classList.contains('hidden')) {
+                container.classList.remove('hidden');
+                toggleButton.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+                toggleButton.setAttribute('aria-expanded', 'true');
+            } else {
+                container.classList.add('hidden');
+                toggleButton.innerHTML = '<i class="fa-solid fa-arrow-down"></i>';
+                toggleButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+});

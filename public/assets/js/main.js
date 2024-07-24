@@ -1,48 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('form').addEventListener('submit', async function(event) {
-        event.preventDefault();
+    const contactForm = document.getElementById('contactForm');
+    const successModal = document.getElementById('successMessageModal');
+    const okButton = document.getElementById('okButton');
+    const closeButton = document.querySelector('.custom-close');
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
 
-        try {
-            const response = await fetch('https://dennis-zepeda.onrender.com/api/contact/send-contact-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, email, message })
-            });
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            // Mostrar el spinner y ocultar el ícono de éxito
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('success-icon').style.display = 'none';
 
-            const result = await response.json();
-            alert('Email sent successfully!');
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again later.');
-        }
-    });
-});
-// archivo: script.js
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('toggle-certificates-btn');
-    const certificatesContainers = document.querySelectorAll('.certificates-container');
+            try {
+                const response = await fetch('https://dennis-zepeda.onrender.com/api/contact/send-contact-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, message })
+                });
 
-    toggleButton.addEventListener('click', function() {
-        certificatesContainers.forEach(container => {
-            if (container.classList.contains('hidden')) {
-                container.classList.remove('hidden');
-                toggleButton.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
-                toggleButton.setAttribute('aria-expanded', 'true');
-            } else {
-                container.classList.add('hidden');
-                toggleButton.innerHTML = '<i class="fa-solid fa-arrow-down"></i>';
-                toggleButton.setAttribute('aria-expanded', 'false');
+                if (response.ok) {
+                    // Ocultar el spinner y mostrar el ícono de éxito
+                    document.getElementById('spinner').style.display = 'none';
+                    document.getElementById('success-icon').style.display = 'block';
+                    
+                    // Mostrar el modal de éxito
+                    successModal.style.display = 'block';
+                } else {
+                    throw new Error('Failed to send email');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+
+                // En caso de error, ocultar el spinner
+                document.getElementById('spinner').style.display = 'none';
+                alert('An error occurred. Please try again later.');
             }
         });
+    }
+
+    // Cerrar el modal al hacer clic en el botón OK
+    if (okButton) {
+        okButton.addEventListener('click', () => {
+            successModal.style.display = 'none';
+        });
+    }
+
+    // Cerrar el modal si el usuario hace clic fuera del modal
+    window.addEventListener('click', (event) => {
+        if (event.target === successModal) {
+            successModal.style.display = 'none';
+        }
     });
+
+    // Cerrar el modal al hacer clic en el botón de cerrar
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            successModal.style.display = 'none';
+        });
+    }
 });

@@ -5270,9 +5270,100 @@ form {
     border: none;
     outline: none;
 }
-
 /* Especifica el color del ícono para que sea el color deseado o transparente */
-.arrow-down,.fa-arrow-up:before i {
+.arrow-down, .fa-arrow-up:before i {
     color: #000; /* Cambia a cualquier color que prefieras, por ejemplo, negro (#000) */
 }
+
+#success-icon {
+    display: none; /* Inicialmente oculto */
+}
+
+
+
+/* Estilo general del modal personalizado */
+.custom-modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000; /* Asegura que el modal esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+/* Contenido del modal personalizado */
+.custom-modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centra el modal verticalmente */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+/* Botón de cerrar del modal personalizado */
+.custom-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Cambios al pasar el ratón sobre el botón de cerrar */
+.custom-close:hover,
+.custom-close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Título del modal personalizado */
+.custom-modal-content h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+/* Texto del modal personalizado */
+.custom-modal-content p {
+    margin: 0 0 20px 0; /* Espacio antes del botón */
+    color: #666;
+}
+
+/* Botón OK dentro del modal personalizado */
+#okButton {
+    background-color: #f06292; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Cambios al pasar el ratón sobre el botón OK */
+#okButton:hover {
+    background-color: #e91e63; /* Color del botón al pasar el ratón */
+}
+
+/* Opcional: Añadir animación para mostrar el modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.custom-modal-content {
+    animation: fadeIn 0.3s;
+}
+
 

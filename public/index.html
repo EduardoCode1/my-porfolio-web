@@ -246,8 +246,7 @@
     </div>
 </section>
 
-    
-   <!-- Certificates Section -->
+  <!-- Certificates Section -->
 <section id="certificates">
     <div class="user-details">
         <h1>Certificates</h1>
@@ -261,7 +260,8 @@
         </button>
     </div>
 
-    <div class="row certificates-container hidden">
+    <!-- Contenedor de Certificados -->
+    <div id="certificates-container" class="row certificates-container hidden">
         <!-- Certificate 1 -->
         <div class="col s12 m6 l3">
             <div class="card">
@@ -290,6 +290,7 @@
             </div>
         </div>
 
+        <!-- Otros Certificados -->
         <!-- Certificate 3 -->
         <div class="col s12 m6 l3">
             <div class="card">
@@ -394,6 +395,32 @@
 
         
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggle-certificates-btn');
+            const certificatesContainer = document.getElementById('certificates-container');
+    
+            toggleBtn.addEventListener('click', function() {
+                // Cambiar la clase 'hidden' para mostrar u ocultar certificados
+                certificatesContainer.classList.toggle('hidden');
+    
+                // Cambiar el icono de la flecha
+                const arrowIcon = toggleBtn.querySelector('i');
+                arrowIcon.classList.toggle('fa-arrow-down');
+                arrowIcon.classList.toggle('fa-arrow-up');
+            });
+        });
+    </script>
+    
+    <style>
+        .hidden {
+            display: none;
+        }
+    
+        .certificates-container {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>        
 <!-- Contact Section -->
 <section id="contact">
     <div class="container">
